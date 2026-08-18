@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f8f5;
+    color: #333;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2e7d32;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo i {
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2e7d32;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 500px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(
+        135deg,
+        #e8f5e9,
+        #f5faf5
+    );
+}
+
+.left {
+    flex: 1;
+}
+
+.welcome {
+    display: inline-block;
+    color: #2e7d32;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.left h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    color: #1b5e20;
+    margin-bottom: 18px;
+}
+
+.left h1 span {
+    color: #43a047;
+}
+
+.left p {
+    max-width: 600px;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn,
+.btn2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn {
+    background: #2e7d32;
+    color: white;
+}
+
+.btn:hover {
+    background: #1b5e20;
+    transform: translateY(-2px);
+}
+
+.btn2 {
+    background: white;
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+.btn2:hover {
+    background: #e8f5e9;
+}
+
+/* ================= HERO RIGHT ================= */
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.farmer-placeholder {
+    width: 380px;
+    height: 320px;
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.farmer-placeholder i {
+    font-size: 90px;
+    color: #43a047;
+    margin-bottom: 20px;
+}
+
+.farmer-placeholder h2 {
+    color: #1b5e20;
+    font-size: 25px;
+}
+
+.farmer-placeholder p {
+    color: #777;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card > i {
+    font-size: 38px;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* ================= INFO ================= */
+
+.info-section {
+    margin: 0 8% 60px;
+    padding: 45px;
+    border-radius: 20px;
+    background: #1b5e20;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.info-section h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.info-section h2 span {
+    color: #a5d6a7;
+}
+
+.info-section p {
+    max-width: 600px;
+    font-size: 13px;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+.info-stats {
+    display: flex;
+    gap: 35px;
+}
+
+.info-stats div {
+    min-width: 80px;
+    text-align: center;
+}
+
+.info-stats i {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.info-stats strong {
+    display: block;
+    font-size: 22px;
+}
+
+.info-stats span {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #123f16;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 0 4%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .left h1 {
+        font-size: 40px;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 5%;
+    }
+
+    .info-section {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 750px) {
+
+    header {
+        height: auto;
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+
+    .left p {
+        margin: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .farmer-placeholder {
+        width: 300px;
+        height: 270px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .left h1 {
+        font-size: 32px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn,
+    .btn2 {
+        width: 100%;
+    }
+
+    .farmer-placeholder {
+        width: 100%;
+    }
+
+}

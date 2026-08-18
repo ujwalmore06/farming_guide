@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sell Crop | Smart Farming</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        .sell-page {
+            padding: 50px 8%;
+        }
+
+        .sell-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .sell-heading h1 {
+            color: #1b5e20;
+            font-size: 32px;
+        }
+
+        .sell-heading p {
+            color: #777;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .sell-container {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .sell-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .sell-card h2 {
+            color: #1b5e20;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #555;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #2e7d32;
+        }
+
+        .sell-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #2e7d32;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .sell-btn:hover {
+            background: #1b5e20;
+        }
+
+        .price-box {
+            background: #e8f5e9;
+            padding: 18px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .price-box span {
+            display: block;
+            color: #777;
+            font-size: 11px;
+        }
+
+        .price-box strong {
+            display: block;
+            color: #1b5e20;
+            font-size: 24px;
+            margin-top: 5px;
+        }
+
+        .market-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 13px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 12px;
+        }
+
+        .market-item:last-child {
+            border-bottom: none;
+        }
+
+        .market-item strong {
+            color: #1b5e20;
+        }
+
+        .success-message {
+            display: none;
+            background: #e8f5e9;
+            color: #1b5e20;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+
+        @media (max-width: 750px) {
+
+            .sell-page {
+                padding: 35px 5%;
+            }
+
+            .sell-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <span>Smart Farming</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="farmer.html">Farmer</a>
+
+            <a href="guide.html">Guide</a>
+
+            <a href="marketplace.html">Market</a>
+
+            <a href="weather.html">Weather</a>
+
+            <a href="equipment.html">Equipment</a>
+
+            <a href="sell.html">Sell Crop</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- SELL PAGE -->
+
+    <main class="sell-page">
+
+
+        <div class="sell-heading">
+
+            <h1>🌾 Sell Your Crop</h1>
+
+            <p>
+                Check market prices and submit your crop for sale.
+            </p>
+
+        </div>
+
+
+        <section class="sell-container">
+
+
+            <!-- SELL FORM -->
+
+            <div class="sell-card">
+
+                <h2>
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    Crop Details
+                </h2>
+
+
+                <form id="sellForm">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Select Crop
+                        </label>
+
+                        <select id="crop" required>
+
+                            <option value="">
+                                Select Crop
+                            </option>
+
+                            <option value="Soybean">
+                                Soybean
+                            </option>
+
+                            <option value="Wheat">
+                                Wheat
+                            </option>
+
+                            <option value="Cotton">
+                                Cotton
+                            </option>
+
+                            <option value="Rice">
+                                Rice
+                            </option>
+
+                            <option value="Maize">
+                                Maize
+                            </option>
+
+                            <option value="Onion">
+                                Onion
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Quantity (Quintal)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            placeholder="Enter quantity"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Expected Price per Quintal
+                        </label>
+
+                        <input
+                            type="number"
+                            id="price"
+                            placeholder="Enter expected price"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Contact Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="mobile"
+                            placeholder="10 digit mobile number"
+                            maxlength="10"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="sell-btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Submit Crop
+
+                    </button>
+
+
+                    <div
+                        class="success-message"
+                        id="successMessage">
+
+                        ✓ Crop details submitted successfully!
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+            <!-- MARKET PRICE -->
+
+            <div class="sell-card">
+
+                <h2>
+                    <i class="fa-solid fa-chart-line"></i>
+                    Today's Market Price
+                </h2>
+
+
+                <div class="price-box">
+
+                    <span>
+                        Select your crop to check price
+                    </span>
+
+                    <strong id="selectedPrice">
+                        ₹0 / Quintal
+                    </strong>
+
+                </div>
+
+
+                <div class="market-item">
+
+                    <span>
+                        🌱 Soybean
+                    </span>
+
+                    <strong>
+                        ₹5,450
+                    </strong>
+
+                </div>
+
+
+                <div class="market-item">
+
+                    <span>
+                        🌾 Wheat
+                    </span>
+
+                    <strong>
+                        ₹2,150
+                    </strong>
+
+                </div>
+
+
+                <div class="market-item">
+
+                    <span>
+                        🌿 Cotton
+                    </span>
+
+                    <strong>
+                        ₹7,300
+                    </strong>
+
+                </div>
+
+
+                <div class="market-item">
+
+                    <span>
+                        🌾 Rice
+                    </span>
+
+                    <strong>
+                        ₹3,200
+                    </strong>
+
+                </div>
+
+
+                <div class="market-item">
+
+                    <span>
+                        🌽 Maize
+                    </span>
+
+                    <strong>
+                        ₹2,400
+                    </strong>
+
+                </div>
+
+
+                <div class="market-item">
+
+                    <span>
+                        🧅 Onion
+                    </span>
+
+                    <strong>
+                        ₹2,800
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        // =====================================
+        // MARKET PRICE
+        // =====================================
+
+        const cropSelect =
+            document.getElementById("crop");
+
+        const selectedPrice =
+            document.getElementById("selectedPrice");
+
+
+        const prices = {
+
+            Soybean: 5450,
+
+            Wheat: 2150,
+
+            Cotton: 7300,
+
+            Rice: 3200,
+
+            Maize: 2400,
+
+            Onion: 2800
+
+        };
+
+
+        cropSelect.addEventListener("change", function() {
+
+            const crop = cropSelect.value;
+
+
+            if (prices[crop]) {
+
+                selectedPrice.textContent =
+                    "₹" + prices[crop] + " / Quintal";
+
+            } else {
+
+                selectedPrice.textContent =
+                    "₹0 / Quintal";
+
+            }
+
+        });
+
+
+        // =====================================
+        // FORM SUBMIT
+        // =====================================
+
+        const sellForm =
+            document.getElementById("sellForm");
+
+        const successMessage =
+            document.getElementById("successMessage");
+
+
+        sellForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const mobile =
+                document.getElementById("mobile").value;
+
+
+            if (!/^[0-9]{10}$/.test(mobile)) {
+
+                alert(
+                    "Please enter a valid 10 digit mobile number."
+                );
+
+                return;
+
+            }
+
+
+            successMessage.style.display = "block";
+
+
+            sellForm.reset();
+
+
+            selectedPrice.textContent =
+                "₹0 / Quintal";
+
+
+            setTimeout(function() {
+
+                successMessage.style.display = "none";
+
+            }, 3000);
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

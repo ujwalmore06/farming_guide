@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather | Smart Farming</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        .weather-page {
+            padding: 50px 8%;
+        }
+
+        .weather-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .weather-heading h1 {
+            color: #1b5e20;
+            font-size: 32px;
+        }
+
+        .weather-heading p {
+            color: #777;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .weather-main-card {
+            max-width: 900px;
+            margin: auto;
+            background: linear-gradient(135deg, #2e7d32, #43a047);
+            color: white;
+            padding: 35px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .location {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        .temperature {
+            font-size: 55px;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+
+        .condition {
+            font-size: 18px;
+        }
+
+        .weather-big-icon {
+            font-size: 80px;
+        }
+
+        .weather-info {
+            max-width: 900px;
+            margin: 25px auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .info-card i {
+            font-size: 25px;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .info-card span {
+            display: block;
+            color: #888;
+            font-size: 11px;
+        }
+
+        .info-card strong {
+            display: block;
+            color: #333;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .forecast {
+            max-width: 900px;
+            margin: 30px auto 0;
+        }
+
+        .forecast h2 {
+            color: #1b5e20;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .forecast-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .day-card {
+            background: white;
+            padding: 18px 10px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .day-card h3 {
+            font-size: 13px;
+            color: #333;
+        }
+
+        .day-card i {
+            font-size: 25px;
+            color: #f9a825;
+            margin: 12px 0;
+        }
+
+        .day-card strong {
+            display: block;
+            color: #1b5e20;
+            font-size: 15px;
+        }
+
+        .day-card span {
+            color: #888;
+            font-size: 10px;
+        }
+
+        @media (max-width: 800px) {
+
+            .weather-main-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .weather-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .forecast-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .weather-page {
+                padding: 30px 5%;
+            }
+
+            .weather-info {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .forecast-list {
+                grid-template-columns: 1fr;
+            }
+
+            .temperature {
+                font-size: 45px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <span>Smart Farming</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="farmer.html">Farmer</a>
+
+            <a href="guide.html">Guide</a>
+
+            <a href="marketplace.html">Market</a>
+
+            <a href="weather.html">Weather</a>
+
+            <a href="equipment.html">Equipment</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- WEATHER PAGE -->
+
+    <main class="weather-page">
+
+
+        <div class="weather-heading">
+
+            <h1>🌤️ Weather Information</h1>
+
+            <p>
+                Check weather conditions before planning your farming activities.
+            </p>
+
+        </div>
+
+
+        <!-- MAIN WEATHER -->
+
+        <section class="weather-main-card">
+
+
+            <div>
+
+                <p class="location">
+                    📍 Nagpur, Maharashtra
+                </p>
+
+                <div class="temperature">
+                    32°C
+                </div>
+
+                <div class="condition">
+                    Sunny
+                </div>
+
+            </div>
+
+
+            <div class="weather-big-icon">
+
+                <i class="fa-solid fa-sun"></i>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- WEATHER DETAILS -->
+
+        <section class="weather-info">
+
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-droplet"></i>
+
+                <span>Humidity</span>
+
+                <strong>60%</strong>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-wind"></i>
+
+                <span>Wind Speed</span>
+
+                <strong>12 km/h</strong>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-cloud-rain"></i>
+
+                <span>Rain Chance</span>
+
+                <strong>10%</strong>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-temperature-half"></i>
+
+                <span>Feels Like</span>
+
+                <strong>34°C</strong>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- FORECAST -->
+
+        <section class="forecast">
+
+            <h2>5 Day Forecast</h2>
+
+
+            <div class="forecast-list">
+
+
+                <div class="day-card">
+
+                    <h3>Today</h3>
+
+                    <i class="fa-solid fa-sun"></i>
+
+                    <strong>32°C</strong>
+
+                    <span>Sunny</span>
+
+                </div>
+
+
+                <div class="day-card">
+
+                    <h3>Tomorrow</h3>
+
+                    <i class="fa-solid fa-cloud-sun"></i>
+
+                    <strong>31°C</strong>
+
+                    <span>Partly Cloudy</span>
+
+                </div>
+
+
+                <div class="day-card">
+
+                    <h3>Wednesday</h3>
+
+                    <i class="fa-solid fa-cloud-rain"></i>
+
+                    <strong>29°C</strong>
+
+                    <span>Light Rain</span>
+
+                </div>
+
+
+                <div class="day-card">
+
+                    <h3>Thursday</h3>
+
+                    <i class="fa-solid fa-cloud"></i>
+
+                    <strong>30°C</strong>
+
+                    <span>Cloudy</span>
+
+                </div>
+
+
+                <div class="day-card">
+
+                    <h3>Friday</h3>
+
+                    <i class="fa-solid fa-sun"></i>
+
+                    <strong>33°C</strong>
+
+                    <span>Sunny</span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>

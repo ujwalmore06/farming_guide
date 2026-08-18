@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Smart Farming</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <i class="fa-solid fa-leaf"></i>
+            <h2>Smart Farming</h2>
+        </div>
+
+
+        <div class="farmer-mini">
+
+            <div class="profile-circle">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div>
+                <h3 id="farmerName">Farmer</h3>
+                <p>Farmer Profile</p>
+            </div>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav class="side-menu">
+
+            <a href="dashboard.html" class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                My Profile
+            </a>
+
+            <a href="farmer.html">
+                <i class="fa-solid fa-user-pen"></i>
+                Farmer Details
+            </a>
+
+            <a href="guide.html">
+                <i class="fa-solid fa-seedling"></i>
+                Farming Guide
+            </a>
+
+            <a href="marketplace.html">
+                <i class="fa-solid fa-store"></i>
+                Marketplace
+            </a>
+
+            <a href="weather.html">
+                <i class="fa-solid fa-cloud-sun"></i>
+                Weather
+            </a>
+
+            <a href="equipment.html">
+                <i class="fa-solid fa-tractor"></i>
+                Equipment
+            </a>
+
+            <a href="sell.html">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                Sell Crop
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Good Morning! 🌾
+                </h1>
+
+                <p>
+                    Welcome to your Smart Farming Dashboard
+                </p>
+
+            </div>
+
+
+            <div class="top-user">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span id="topFarmerName">
+                    Farmer
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- WEATHER CARD -->
+
+        <section class="weather-card">
+
+            <div>
+
+                <p>Today's Weather</p>
+
+                <h2>32°C</h2>
+
+                <h3>Sunny</h3>
+
+                <p>Nagpur, Maharashtra</p>
+
+            </div>
+
+
+            <div class="weather-icon">
+
+                <i class="fa-solid fa-sun"></i>
+
+            </div>
+
+
+            <div class="weather-details">
+
+                <div>
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                    <span>
+                        Humidity
+                        <br>
+                        <b>60%</b>
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-wind"></i>
+
+                    <span>
+                        Wind
+                        <br>
+                        <b>12 km/h</b>
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-cloud-rain"></i>
+
+                    <span>
+                        Rain Chance
+                        <br>
+                        <b>10%</b>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK CARDS -->
+
+        <section class="cards">
+
+
+            <a href="guide.html" class="dashboard-card">
+
+                <div class="card-icon green">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <h3>Farming Guide</h3>
+
+                <p>
+                    Get crop-wise farming plans
+                </p>
+
+            </a>
+
+
+            <a href="marketplace.html" class="dashboard-card">
+
+                <div class="card-icon orange">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+
+                <h3>Marketplace</h3>
+
+                <p>
+                    Buy seeds, fertilizer & tools
+                </p>
+
+            </a>
+
+
+            <a href="equipment.html" class="dashboard-card">
+
+                <div class="card-icon blue">
+                    <i class="fa-solid fa-tractor"></i>
+                </div>
+
+                <h3>Rent Equipment</h3>
+
+                <p>
+                    Book farming machines
+                </p>
+
+            </a>
+
+
+            <a href="sell.html" class="dashboard-card">
+
+                <div class="card-icon purple">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3>Sell Crop</h3>
+
+                <p>
+                    Check market price & sell
+                </p>
+
+            </a>
+
+        </section>
+
+
+        <!-- DASHBOARD GRID -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- TODAY'S TASK -->
+
+            <div class="panel">
+
+                <div class="panel-title">
+
+                    <h2>Today's Task</h2>
+
+                    <a href="guide.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="task">
+
+                    <div class="task-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+
+
+                    <div>
+
+                        <h3>Check Crop</h3>
+
+                        <p>
+                            Check your crop condition
+                        </p>
+
+                    </div>
+
+
+                    <button class="task-btn">
+                        Done
+                    </button>
+
+                </div>
+
+
+                <div class="task">
+
+                    <div class="task-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+
+                    <div>
+
+                        <h3>Check Irrigation</h3>
+
+                        <p>
+                            Check soil moisture
+                        </p>
+
+                    </div>
+
+
+                    <button class="task-btn">
+                        View
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CROP PROGRESS -->
+
+            <div class="panel">
+
+                <div class="panel-title">
+
+                    <h2>Crop Progress</h2>
+
+                    <a href="guide.html">
+                        Details
+                    </a>
+
+                </div>
+
+
+                <div class="crop-info">
+
+                    <div class="crop-image">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+
+
+                    <div>
+
+                        <h3 id="dashboardCrop">
+                            No Crop Selected
+                        </h3>
+
+                        <p id="dashboardLand">
+                            0 Acres
+                        </p>
+
+                    </div>
+
+
+                    <strong>
+                        45%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div></div>
+
+                </div>
+
+
+                <p class="stage">
+                    Current Stage:
+                    Vegetative Stage
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MARKET PRICES -->
+
+        <section class="panel market-panel">
+
+            <div class="panel-title">
+
+                <h2>
+                    Today's Market Prices
+                </h2>
+
+                <a href="marketplace.html">
+                    View Market
+                </a>
+
+            </div>
+
+
+            <div class="market-list">
+
+
+                <div>
+
+                    <span>
+                        🌱 Soybean
+                    </span>
+
+                    <strong>
+                        ₹5,450 / Quintal
+                    </strong>
+
+                    <small>
+                        ▲ 2.5%
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        🌾 Wheat
+                    </span>
+
+                    <strong>
+                        ₹2,150 / Quintal
+                    </strong>
+
+                    <small>
+                        ▲ 1.2%
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        🌿 Cotton
+                    </span>
+
+                    <strong>
+                        ₹7,300 / Quintal
+                    </strong>
+
+                    <small>
+                        ▲ 1.8%
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

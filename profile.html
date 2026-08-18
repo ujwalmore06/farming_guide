@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | Smart Farming</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        .profile-page {
+            padding: 50px 8%;
+        }
+
+        .profile-heading {
+            margin-bottom: 30px;
+        }
+
+        .profile-heading h1 {
+            color: #1b5e20;
+            font-size: 30px;
+        }
+
+        .profile-heading p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .profile-container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .profile-top {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 25px;
+        }
+
+        .profile-icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: #e8f5e9;
+            color: #2e7d32;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .profile-top h2 {
+            color: #1b5e20;
+            font-size: 22px;
+        }
+
+        .profile-top p {
+            color: #888;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .profile-item {
+            background: #f8faf8;
+            padding: 16px;
+            border-radius: 10px;
+        }
+
+        .profile-item span {
+            display: block;
+            color: #888;
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .profile-item strong {
+            color: #333;
+            font-size: 14px;
+        }
+
+        .edit-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 11px 20px;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .edit-btn:hover {
+            background: #1b5e20;
+        }
+
+        @media (max-width: 650px) {
+
+            .profile-page {
+                padding: 30px 5%;
+            }
+
+            .profile-container {
+                padding: 25px 20px;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <span>Smart Farming</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="farmer.html">Farmer</a>
+
+            <a href="guide.html">Guide</a>
+
+            <a href="marketplace.html">Market</a>
+
+            <a href="weather.html">Weather</a>
+
+            <a href="equipment.html">Equipment</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PROFILE -->
+
+    <main class="profile-page">
+
+
+        <div class="profile-heading">
+
+            <h1>👤 My Profile</h1>
+
+            <p>
+                Your saved farmer information.
+            </p>
+
+        </div>
+
+
+        <div class="profile-container">
+
+
+            <div class="profile-top">
+
+                <div class="profile-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h2 id="profileName">
+                        Farmer
+                    </h2>
+
+                    <p>
+                        Smart Farming Account
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-grid">
+
+
+                <div class="profile-item">
+
+                    <span>Mobile Number</span>
+
+                    <strong id="profileMobile">
+                        Not Available
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>State</span>
+
+                    <strong id="profileState">
+                        Not Available
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>District</span>
+
+                    <strong id="profileDistrict">
+                        Not Available
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>Taluka</span>
+
+                    <strong id="profileTaluka">
+                        Not Available
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>Village</span>
+
+                    <strong id="profileVillage">
+                        Not Available
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>Main Crop</span>
+
+                    <strong id="profileCrop">
+                        Not Available
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>Land Area</span>
+
+                    <strong id="profileLand">
+                        Not Available
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>Soil Type</span>
+
+                    <strong id="profileSoil">
+                        Not Available
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>Irrigation Method</span>
+
+                    <strong id="profileIrrigation">
+                        Not Available
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <a href="farmer.html" class="edit-btn">
+
+                <i class="fa-solid fa-pen"></i>
+
+                Edit Farmer Details
+
+            </a>
+
+
+        </div>
+
+    </main>
+
+
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>

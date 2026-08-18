@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Details | Smart Farming</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        .farmer-page {
+            padding: 50px 8%;
+        }
+
+        .page-heading {
+            margin-bottom: 30px;
+        }
+
+        .page-heading h1 {
+            color: #1b5e20;
+            font-size: 30px;
+        }
+
+        .page-heading p {
+            color: #777;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .farmer-form {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 7px;
+            color: #444;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 13px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #2e7d32;
+        }
+
+        .save-btn {
+            margin-top: 25px;
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #2e7d32;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .save-btn:hover {
+            background: #1b5e20;
+        }
+
+        .success-message {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+
+            .farmer-page {
+                padding: 30px 5%;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .farmer-form {
+                padding: 25px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <span>Smart Farming</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="guide.html">Guide</a>
+
+            <a href="marketplace.html">Market</a>
+
+            <a href="weather.html">Weather</a>
+
+            <a href="equipment.html">Equipment</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- FARMER DETAILS -->
+
+    <main class="farmer-page">
+
+
+        <div class="page-heading">
+
+            <h1>👨‍🌾 Farmer Details</h1>
+
+            <p>
+                Enter your farming information to personalize your dashboard.
+            </p>
+
+        </div>
+
+
+        <form class="farmer-form" id="farmerForm">
+
+
+            <div class="form-grid">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Farmer Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MOBILE -->
+
+                <div class="form-group">
+
+                    <label for="mobile">
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        placeholder="Enter mobile number"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- STATE -->
+
+                <div class="form-group">
+
+                    <label for="state">
+                        State
+                    </label>
+
+                    <select id="state" required>
+
+                        <option value="">
+                            Select State
+                        </option>
+
+                        <option value="Maharashtra">
+                            Maharashtra
+                        </option>
+
+                        <option value="Madhya Pradesh">
+                            Madhya Pradesh
+                        </option>
+
+                        <option value="Gujarat">
+                            Gujarat
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DISTRICT -->
+
+                <div class="form-group">
+
+                    <label for="district">
+                        District
+                    </label>
+
+                    <input
+                        type="text"
+                        id="district"
+                        placeholder="Enter district"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- TALUKA -->
+
+                <div class="form-group">
+
+                    <label for="taluka">
+                        Taluka
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taluka"
+                        placeholder="Enter taluka"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- VILLAGE -->
+
+                <div class="form-group">
+
+                    <label for="village">
+                        Village
+                    </label>
+
+                    <input
+                        type="text"
+                        id="village"
+                        placeholder="Enter village"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CROP -->
+
+                <div class="form-group">
+
+                    <label for="crop">
+                        Main Crop
+                    </label>
+
+                    <select id="crop" required>
+
+                        <option value="">
+                            Select Crop
+                        </option>
+
+                        <option value="Soybean">
+                            Soybean
+                        </option>
+
+                        <option value="Wheat">
+                            Wheat
+                        </option>
+
+                        <option value="Cotton">
+                            Cotton
+                        </option>
+
+                        <option value="Rice">
+                            Rice
+                        </option>
+
+                        <option value="Maize">
+                            Maize
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- LAND -->
+
+                <div class="form-group">
+
+                    <label for="land">
+                        Land Area (Acres)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="land"
+                        placeholder="Enter land area"
+                        min="0"
+                        step="0.1"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- SOIL -->
+
+                <div class="form-group">
+
+                    <label for="soil">
+                        Soil Type
+                    </label>
+
+                    <select id="soil" required>
+
+                        <option value="">
+                            Select Soil Type
+                        </option>
+
+                        <option value="Black Soil">
+                            Black Soil
+                        </option>
+
+                        <option value="Red Soil">
+                            Red Soil
+                        </option>
+
+                        <option value="Alluvial Soil">
+                            Alluvial Soil
+                        </option>
+
+                        <option value="Laterite Soil">
+                            Laterite Soil
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- IRRIGATION -->
+
+                <div class="form-group">
+
+                    <label for="irrigation">
+                        Irrigation Method
+                    </label>
+
+                    <select id="irrigation" required>
+
+                        <option value="">
+                            Select Method
+                        </option>
+
+                        <option value="Drip Irrigation">
+                            Drip Irrigation
+                        </option>
+
+                        <option value="Sprinkler">
+                            Sprinkler
+                        </option>
+
+                        <option value="Canal">
+                            Canal
+                        </option>
+
+                        <option value="Rainfed">
+                            Rainfed
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="save-btn"
+            >
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Farmer Details
+
+            </button>
+
+
+            <div
+                class="success-message"
+                id="successMessage"
+            >
+
+                ✅ Farmer details saved successfully!
+
+            </div>
+
+
+        </form>
+
+    </main>
+
+
+    <script src="js/farmer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rent Equipment | Smart Farming</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        .equipment-page {
+            padding: 50px 8%;
+        }
+
+        .equipment-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .equipment-heading h1 {
+            color: #1b5e20;
+            font-size: 32px;
+        }
+
+        .equipment-heading p {
+            color: #777;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .equipment-card {
+            background: white;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .equipment-icon {
+            height: 130px;
+            border-radius: 12px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            margin-bottom: 18px;
+        }
+
+        .equipment-card h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .equipment-card p {
+            color: #888;
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .equipment-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .rent-price {
+            color: #1b5e20;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .availability {
+            color: #2e7d32;
+            font-size: 11px;
+        }
+
+        .rent-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 7px;
+            background: #2e7d32;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .rent-btn:hover {
+            background: #1b5e20;
+        }
+
+        @media (max-width: 900px) {
+
+            .equipment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .equipment-page {
+                padding: 35px 5%;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <span>Smart Farming</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="farmer.html">Farmer</a>
+
+            <a href="guide.html">Guide</a>
+
+            <a href="marketplace.html">Market</a>
+
+            <a href="weather.html">Weather</a>
+
+            <a href="equipment.html">Equipment</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- EQUIPMENT PAGE -->
+
+    <main class="equipment-page">
+
+
+        <div class="equipment-heading">
+
+            <h1>🚜 Rent Farming Equipment</h1>
+
+            <p>
+                Rent useful farming machines according to your requirements.
+            </p>
+
+        </div>
+
+
+        <section class="equipment-grid">
+
+
+            <!-- TRACTOR -->
+
+            <div class="equipment-card">
+
+                <div class="equipment-icon">
+
+                    <i class="fa-solid fa-tractor"></i>
+
+                </div>
+
+                <h2>Tractor</h2>
+
+                <p>
+                    Suitable for ploughing, cultivation and transportation.
+                </p>
+
+                <div class="equipment-details">
+
+                    <span class="rent-price">
+                        ₹1,500 / Day
+                    </span>
+
+                    <span class="availability">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <button class="rent-btn">
+                    Rent Now
+                </button>
+
+            </div>
+
+
+            <!-- HARVESTER -->
+
+            <div class="equipment-card">
+
+                <div class="equipment-icon">
+
+                    <i class="fa-solid fa-wheat-awn"></i>
+
+                </div>
+
+                <h2>Harvester</h2>
+
+                <p>
+                    Useful for harvesting crops quickly and efficiently.
+                </p>
+
+                <div class="equipment-details">
+
+                    <span class="rent-price">
+                        ₹3,500 / Day
+                    </span>
+
+                    <span class="availability">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <button class="rent-btn">
+                    Rent Now
+                </button>
+
+            </div>
+
+
+            <!-- ROTAVATOR -->
+
+            <div class="equipment-card">
+
+                <div class="equipment-icon">
+
+                    <i class="fa-solid fa-gears"></i>
+
+                </div>
+
+                <h2>Rotavator</h2>
+
+                <p>
+                    Helps prepare and loosen the soil before sowing.
+                </p>
+
+                <div class="equipment-details">
+
+                    <span class="rent-price">
+                        ₹1,200 / Day
+                    </span>
+
+                    <span class="availability">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <button class="rent-btn">
+                    Rent Now
+                </button>
+
+            </div>
+
+
+            <!-- CULTIVATOR -->
+
+            <div class="equipment-card">
+
+                <div class="equipment-icon">
+
+                    <i class="fa-solid fa-wrench"></i>
+
+                </div>
+
+                <h2>Cultivator</h2>
+
+                <p>
+                    Used for soil cultivation and weed management.
+                </p>
+
+                <div class="equipment-details">
+
+                    <span class="rent-price">
+                        ₹900 / Day
+                    </span>
+
+                    <span class="availability">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <button class="rent-btn">
+                    Rent Now
+                </button>
+
+            </div>
+
+
+            <!-- SPRAYER -->
+
+            <div class="equipment-card">
+
+                <div class="equipment-icon">
+
+                    <i class="fa-solid fa-spray-can"></i>
+
+                </div>
+
+                <h2>Crop Sprayer</h2>
+
+                <p>
+                    Useful for applying crop protection products.
+                </p>
+
+                <div class="equipment-details">
+
+                    <span class="rent-price">
+                        ₹600 / Day
+                    </span>
+
+                    <span class="availability">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <button class="rent-btn">
+                    Rent Now
+                </button>
+
+            </div>
+
+
+            <!-- SEED DRILL -->
+
+            <div class="equipment-card">
+
+                <div class="equipment-icon">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                </div>
+
+                <h2>Seed Drill</h2>
+
+                <p>
+                    Helps in uniform seed placement during sowing.
+                </p>
+
+                <div class="equipment-details">
+
+                    <span class="rent-price">
+                        ₹1,000 / Day
+                    </span>
+
+                    <span class="availability">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <button class="rent-btn">
+                    Rent Now
+                </button>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const rentButtons =
+            document.querySelectorAll(".rent-btn");
+
+
+        rentButtons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                button.textContent = "✓ Booking Requested";
+
+                button.style.background = "#1b5e20";
+
+                setTimeout(function() {
+
+                    button.textContent = "Rent Now";
+
+                    button.style.background = "#2e7d32";
+
+                }, 1800);
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

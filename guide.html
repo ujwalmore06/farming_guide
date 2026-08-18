@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farming Guide | Smart Farming</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        .guide-page {
+            padding: 50px 8%;
+        }
+
+        .guide-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .guide-heading h1 {
+            color: #1b5e20;
+            font-size: 32px;
+        }
+
+        .guide-heading p {
+            color: #777;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .guide-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .guide-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .guide-card h2 {
+            color: #1b5e20;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .guide-card p {
+            color: #777;
+            font-size: 12px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .guide-card ul {
+            padding-left: 18px;
+            color: #555;
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .guide-card li::marker {
+            color: #2e7d32;
+        }
+
+        @media (max-width: 900px) {
+
+            .guide-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .guide-page {
+                padding: 35px 5%;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <span>Smart Farming</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="farmer.html">Farmer</a>
+
+            <a href="guide.html">Guide</a>
+
+            <a href="marketplace.html">Market</a>
+
+            <a href="weather.html">Weather</a>
+
+            <a href="equipment.html">Equipment</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- GUIDE -->
+
+    <main class="guide-page">
+
+
+        <div class="guide-heading">
+
+            <h1>🌱 Farming Guide</h1>
+
+            <p>
+                Learn the basic farming process for different crops.
+            </p>
+
+        </div>
+
+
+        <section class="guide-grid">
+
+
+            <!-- SOYBEAN -->
+
+            <div class="guide-card">
+
+                <div class="guide-icon">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                </div>
+
+                <h2>Soybean</h2>
+
+                <p>
+                    Important steps for growing soybean successfully.
+                </p>
+
+                <ul>
+
+                    <li>Prepare the soil properly</li>
+
+                    <li>Select good quality seeds</li>
+
+                    <li>Sow during suitable season</li>
+
+                    <li>Maintain proper moisture</li>
+
+                    <li>Control weeds and pests</li>
+
+                    <li>Harvest when mature</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- COTTON -->
+
+            <div class="guide-card">
+
+                <div class="guide-icon">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                </div>
+
+                <h2>Cotton</h2>
+
+                <p>
+                    Basic cultivation steps for cotton farming.
+                </p>
+
+                <ul>
+
+                    <li>Prepare well-drained soil</li>
+
+                    <li>Use quality cotton seeds</li>
+
+                    <li>Maintain suitable spacing</li>
+
+                    <li>Monitor irrigation</li>
+
+                    <li>Control pests regularly</li>
+
+                    <li>Harvest mature bolls</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- WHEAT -->
+
+            <div class="guide-card">
+
+                <div class="guide-icon">
+
+                    <i class="fa-solid fa-wheat-awn"></i>
+
+                </div>
+
+                <h2>Wheat</h2>
+
+                <p>
+                    Essential steps for wheat cultivation.
+                </p>
+
+                <ul>
+
+                    <li>Prepare fine soil bed</li>
+
+                    <li>Select healthy seeds</li>
+
+                    <li>Sow at suitable time</li>
+
+                    <li>Provide required irrigation</li>
+
+                    <li>Manage weeds</li>
+
+                    <li>Harvest after maturity</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- RICE -->
+
+            <div class="guide-card">
+
+                <div class="guide-icon">
+
+                    <i class="fa-solid fa-water"></i>
+
+                </div>
+
+                <h2>Rice</h2>
+
+                <p>
+                    Basic information for rice cultivation.
+                </p>
+
+                <ul>
+
+                    <li>Prepare and level the field</li>
+
+                    <li>Use healthy seedlings</li>
+
+                    <li>Maintain suitable water level</li>
+
+                    <li>Apply nutrients as required</li>
+
+                    <li>Control weeds and pests</li>
+
+                    <li>Harvest mature crop</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- MAIZE -->
+
+            <div class="guide-card">
+
+                <div class="guide-icon">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                </div>
+
+                <h2>Maize</h2>
+
+                <p>
+                    Important practices for maize farming.
+                </p>
+
+                <ul>
+
+                    <li>Prepare fertile soil</li>
+
+                    <li>Select quality seeds</li>
+
+                    <li>Maintain proper plant spacing</li>
+
+                    <li>Provide timely irrigation</li>
+
+                    <li>Control weeds and pests</li>
+
+                    <li>Harvest when grains mature</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- ONION -->
+
+            <div class="guide-card">
+
+                <div class="guide-icon">
+
+                    <i class="fa-solid fa-circle"></i>
+
+                </div>
+
+                <h2>Onion</h2>
+
+                <p>
+                    Basic cultivation information for onion.
+                </p>
+
+                <ul>
+
+                    <li>Prepare loose soil</li>
+
+                    <li>Use healthy seedlings</li>
+
+                    <li>Maintain proper spacing</li>
+
+                    <li>Provide regular irrigation</li>
+
+                    <li>Control weeds</li>
+
+                    <li>Harvest after bulb maturity</li>
+
+                </ul>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>s
